@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Checkout() {
   const [cart, setCart] = useState([]);
+  const navigate = useNavigate();
+  const[orderPlaced , setOrderPlaced] = useState(false);
 
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -16,11 +19,23 @@ function Checkout() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    alert("Order placed successfully! 🎉");
+    // alert("Order placed successfully! 🎉");
 
     localStorage.removeItem("cart");
     setCart([]);
+    setOrderPlaced(true);
   };
+
+  if(orderPlaced){
+    return(
+      <div className="order-success">
+        <h1>🎉 Order Placed Successfully!</h1>
+        <p>Thankyou for shopping with ShopZone</p>
+
+        <button onClick={() => navigate("/")}>Continue Shopping</button>
+      </div>
+    );
+  }
 
   if (cart.length === 0) {
     return (

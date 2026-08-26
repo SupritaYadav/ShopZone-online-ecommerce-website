@@ -302,6 +302,7 @@ body{
   border-radius: 5px;
   font-size: 15px;
   background: whitesmoke;
+  color: black;
 }
 
 .form-group textarea {
@@ -373,6 +374,182 @@ body{
 }
 
 
+/* Order Success Page */
+.order-success {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.order-success h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.order-success p {
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: #191818;
+}
+
+.order-success button {
+  padding: 12px 24px;
+  background: #768fea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.order-success button:hover {
+  background: #454d9b;
+}
+
+/* ================= HOME PAGE ================= */
+
+.home-page {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.home-content {
+  max-width: 700px;
+  padding: 40px;
+}
+
+.home-content h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.home-content p {
+  font-size: 22px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.home-content .home-description {
+  font-size: 17px;
+  line-height: 1.6;
+  max-width: 550px;
+  margin: 0 auto 25px;
+  color: #555;
+}
+
+.shop-now-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #222;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.shop-now-btn:hover {
+  background-color: #444;
+}
+
+/* ================= CONTACT PAGE ================= */
+
+.contact-page {
+  min-height: calc(100vh - 70px);
+  padding: 50px 30px;
+}
+
+.contact-page > h1 {
+  text-align: center;
+  font-size: 40px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.contact-intro {
+  text-align: center;
+  color: #555;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.contact-info,
+.contact-form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.contact-info h2,
+.contact-form h2 {
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  color: #444;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+.contact-form .form-group {
+  margin-bottom: 18px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.send-btn {
+  padding: 11px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #222;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.send-btn:hover {
+  background: #444;
+}
 
 @media (max-width: 768px) {
 
@@ -642,4 +819,46 @@ body{
   .place-order-btn {
     font-size: 15px;
   }
+
+  .order-success {
+    min-height: calc(100vh - 60px);
+    padding: 30px 15px;
+  }
+
+  .order-success h1 {
+    font-size: 28px;
+  }
+
+  .order-success p {
+    font-size: 16px;
+  }
+
+  .order-success button {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .contact-container {
+  grid-template-columns: 1fr;
+}
+
+.home-content {
+  padding: 20px;
+}
+
+.home-content h1 {
+  font-size: 34px;
+}
+
+.home-content p {
+  font-size: 18px;
+}
+
+.contact-page {
+  padding: 30px 15px;
+}
+
+.contact-page > h1 {
+  font-size: 32px;
+}
 }
