@@ -5,7 +5,7 @@ ShopZone is a responsive e-commerce web application built using React.js. It all
 ---
 ## 🚀 Live Demo
 You can view the live deployment of this project here:
-👉 **[ShopZone Live Website](https://shopzone-lac-kappa.vercel.app/shop)**
+👉 **[ShopZone Live Website](https://shopzone-lac-kappa.vercel.app)**
 
 ---
 
