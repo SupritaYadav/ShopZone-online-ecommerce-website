@@ -5,6 +5,7 @@ function ProductDetails(){
    const{ id } = useParams();
    const[product, setProduct] = useState(null);
    const[loading, setLoading] = useState(true);
+   const[addedMessage, setAddedMessage] = useState(false);
 
    useEffect(()=>{
     fetch(`https://dummyjson.com/products/${id}`).then((response)=> response.json()).then((data) => {
@@ -41,7 +42,12 @@ function ProductDetails(){
 
   localStorage.setItem("cart", JSON.stringify(updatedCart));
 
-  alert("Product added to cart!");
+  setAddedMessage(true);
+  setTimeout(() => {
+    setAddedMessage(false);
+  }, 3000);
+
+  // alert("Product added to cart!");
 };
 
    if(loading){
@@ -63,6 +69,12 @@ function ProductDetails(){
         <p>Category : {product.category}</p>
         <p>Brand : {product.brand}</p><br />
         <button onClick={addToCart}>🛒Add to Cart</button><br /><br />
+
+        {addedMessage && (
+          <div className="cart-success-message">
+             🎉Product added to cart!
+          </div>
+        )} <br /><br />
         
         <Link to="/shop"  className="back-to-shop">⬅Back to Shop</Link>
             </div>

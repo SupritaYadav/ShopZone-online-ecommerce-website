@@ -19,8 +19,6 @@ function Checkout() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // alert("Order placed successfully! 🎉");
-
     localStorage.removeItem("cart");
     setCart([]);
     setOrderPlaced(true);
